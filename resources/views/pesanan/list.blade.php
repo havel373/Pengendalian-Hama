@@ -65,4 +65,4 @@
     </table>
 </div>
 
-{{ $collection->links() }}
+{{$collection->links()}}
