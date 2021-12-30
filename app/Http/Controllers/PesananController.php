@@ -19,7 +19,7 @@ class PesananController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            $collection = Pesanan::orderBy('created_at','asc')->paginate(5);
+            $collection = Pesanan::orderBy('created_at','desc')->paginate(5);
             return view('pesanan.list',compact('collection'));
         }
         return view('pesanan.main');
@@ -122,11 +122,11 @@ class PesananController extends Controller
 
         $id_penanganan = $request->id_penanganan;
         if($id_penanganan == 1){
-            $harga_penanganan = 55000;
+            $harga_penanganan = 5500;
         }else if($id_penanganan == 2){
-            $harga_penanganan = 60000;
+            $harga_penanganan = 6000;
         }else if($id_penanganan == 3){
-            $harga_penanganan = 50000;
+            $harga_penanganan = 5000;
         }
 
         $id_jenis_tempat = $request->id_jenis_tempat;
@@ -144,7 +144,9 @@ class PesananController extends Controller
             $harga_tempat = 2800000;
         }
 
-        $hargatotal = (($request->panjang * $request->lebar) * $harga_penanganan) + $harga_tempat;
+
+
+        $hargatotal = (($request->panjang * $request->lebar) * $harga_penanganan) + $harga_tempat + 3000000; 
 
         $pesanan->harga = $hargatotal;
         $pesanan->save();

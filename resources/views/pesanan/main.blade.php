@@ -14,6 +14,9 @@
                     <div class="card-body">
                         <div class="card-title">
                             <h2>Daftar Pesanan</h2>
+                            <button onclick="">Semua</button>
+                            <button onclick="">Selesai</button>
+                            <button onclick="">Pending</button>
                             <div id="list_result"></div>
                         </div>
                     </div>

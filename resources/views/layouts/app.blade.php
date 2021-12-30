@@ -11,6 +11,7 @@
 
     <!-- Scripts -->
     <!-- Fonts -->
+    <link rel="icon" type="image/png" href="{{asset('img/logo1.jpeg')}}" />
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <style>
@@ -39,7 +40,9 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    Pengendalian Hama
+                    <div class="col-xl-2">
+                        <img src="{{asset('img/logo2.jpeg')}}" alt="" class="img-thumbnail img-fluid">
+                    </div>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
